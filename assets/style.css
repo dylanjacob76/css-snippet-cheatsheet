@@ -15,6 +15,7 @@ body {
     background-color: var(--background);
 }
 
+/* HEADER */
 header > * {
     text-align: center;
     margin: 20px;
@@ -32,3 +33,71 @@ header p {
     font-weight: lighter;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    flex: 1 0 100%;
+    padding: 24px;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 24px;
+}
+
+.box h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.box p {
+    color: rgb(186, 186, 186);
+    text-align: center;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+/* found in solution */
+.box pre {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    color: var(--gin);
+    border-radius: 8px;
+    background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+  }
+/* ------- */
+
+pre {
+    background-color: var(--primary-color);
+    position:static;
+    right: 250%;
+}
+
+footer {
+   text-align: center;
+   color: var(--primary-color);
+   font-weight: bold;
+   margin: 1.5rem;
+}
+
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
+    .box {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+  }
