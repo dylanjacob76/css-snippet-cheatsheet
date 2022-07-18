@@ -1,0 +1,34 @@
+:root {
+    --primary-color: rgb(194, 121, 239);
+    --secondary-color: #fff;
+    --background: rgb(45, 53, 65);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--background);
+}
+
+header > * {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--secondary-color);
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
