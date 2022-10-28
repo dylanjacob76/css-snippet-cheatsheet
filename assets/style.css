@@ -1,103 +1,110 @@
 :root {
-    --primary-color: rgb(194, 121, 239);
-    --secondary-color: #fff;
-    --background: rgb(45, 53, 65);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --background: rgb(255, 252, 241);
+    --olive: rgb(185, 185, 62);
+    --gold: rgb(232, 178, 124);
 }
 
 body {
-    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
     background-color: var(--background);
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /* HEADER */
-header > * {
+header {
     text-align: center;
-    margin: 20px;
+    margin: 28px 15% 28px 15%;
 }
 
-h1 {
-    color: var(--primary-color);
+header h1 {
+    color: var(--gold);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header p {
-    color: var(--secondary-color);
-    margin-left: 10%;
-    margin-right: 10%;
     font-size: 16px;
-    font-weight: lighter;
+    margin-bottom: 72px;
 }
 
+/* CONTAINER */
 .container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
+    /* width: 100% */
 }
 
+/* BOXES */
 .box {
-    flex: 1 0 100%;
-    padding: 24px;
-    transition: flex-basis 500ms linear;
-    margin-bottom: 24px;
+    width: 21.66%;
+    max-width: 550px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    border: 2px dashed var(--gold);
+    margin-bottom: 44px;
+    width: 30%;
+    background-color: var(--background);
+    transition: 0.3s ease-in-out;
+}
+
+.box:hover {
+    box-shadow: 0 5px 15px rgb(195, 195, 195);
+    transform: scale(1.005);
 }
 
 .box h2 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--olive);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 12px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 236px;
+    background-color: var(--background);
+}
+
+.overlay h2 {
+    width: 300px;
 }
 
 .box p {
-    color: rgb(186, 186, 186);
-    text-align: center;
-    font-weight: lighter;
     font-size: 16px;
 }
 
-/* found in solution */
 .box pre {
-    display: flex;
-    align-items: center;
-    white-space: pre-wrap;
-    overflow: auto;
-    tab-size: 4;
-    padding: 1.2rem 1rem;
-    color: var(--gin);
+    background: linear-gradient(to bottom right, var(--background) 15%, rgb(239, 200, 162));
     border-radius: 8px;
-    background-image: linear-gradient(
-      rgba(232, 102, 236, 0.3) 0%,
-      rgba(232, 102, 236, 0.6) 100%
-    );
-  }
-/* ------- */
-
-pre {
-    background-color: var(--primary-color);
-    position:static;
-    right: 250%;
+    border: 2px solid var(--olive);
+    color: rgb(76, 76, 76);
+    padding: 16px;
+    height: auto;
+    overflow:auto;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    user-select: all;
+    cursor: pointer;
 }
 
-footer {
-   text-align: center;
-   color: var(--primary-color);
-   font-weight: bold;
-   margin: 1.5rem;
+/* MEDIA QUERIES */
+@media only screen and (max-width: 962px) {
+.box {
+    width: 50%;
+    margin-top: 32px;
+ }
 }
 
-
-@media screen and (min-width: 992px) {
-    .container {
-        margin-right: 10%;
-        margin-left: 10%;
-    }
-    
-    .box {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-    }
-  }
+@media only screen and (max-width: 768px) {
+.box {
+    width: 100%;
+    margin-top: 32px;
+ }
+}
